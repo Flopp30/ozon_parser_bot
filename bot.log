@@ -1,0 +1,210 @@
+2023-07-26 22:00:41,955 - asyncio - DEBUG - Using selector: EpollSelector
+2023-07-26 22:00:45,334 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x7f734af4a690>
+2023-07-26 22:00:45,335 - asyncio - ERROR - Unclosed connector
+connections: ['[(<aiohttp.client_proto.ResponseHandler object at 0x7f734a844130>, 2450.417512058)]']
+connector: <aiohttp.connector.TCPConnector object at 0x7f734af4a2d0>
+2023-07-26 22:02:05,101 - asyncio - DEBUG - Using selector: EpollSelector
+2023-07-26 22:02:05,800 - aiogram.dispatcher - INFO - Start polling
+2023-07-26 22:02:05,996 - aiogram.dispatcher - INFO - Run polling for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:02:07,180 - aiogram.event - INFO - Update id=498668296 is handled. Duration 937 ms by bot id=6600760153
+2023-07-26 22:02:13,341 - aiogram.event - INFO - Update id=498668297 is handled. Duration 337 ms by bot id=6600760153
+2023-07-26 22:02:25,589 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2023-07-26 22:02:25,589 - aiogram.dispatcher - INFO - Polling stopped for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:02:25,590 - aiogram.dispatcher - INFO - Polling stopped
+2023-07-26 22:02:38,418 - asyncio - DEBUG - Using selector: EpollSelector
+2023-07-26 22:02:39,657 - aiogram.dispatcher - INFO - Start polling
+2023-07-26 22:02:40,086 - aiogram.dispatcher - INFO - Run polling for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:02:41,337 - aiogram.event - INFO - Update id=498668298 is not handled. Duration 0 ms by bot id=6600760153
+2023-07-26 22:02:41,338 - aiogram.event - ERROR - Cause exception while process update id=498668298 by bot id=6600760153
+AttributeError: 'Message' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/pydantic/main.py", line 702, in __getattr__
+    return pydantic_extra[item]
+           ~~~~~~~~~~~~~~^^^^^^
+KeyError: 'message'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/bot/middleware/permission_check.py", line 21, in __call__
+    return await event.message.answer(PERMISSION_DENIED_MESSAGE)
+                 ^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/pydantic/main.py", line 704, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}') from exc
+AttributeError: 'Message' object has no attribute 'message'
+2023-07-26 22:02:57,713 - aiogram.event - INFO - Update id=498668299 is not handled. Duration 0 ms by bot id=6600760153
+2023-07-26 22:02:57,714 - aiogram.event - ERROR - Cause exception while process update id=498668299 by bot id=6600760153
+AttributeError: 'Message' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/pydantic/main.py", line 702, in __getattr__
+    return pydantic_extra[item]
+           ~~~~~~~~~~~~~~^^^^^^
+KeyError: 'message'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/bot/middleware/permission_check.py", line 21, in __call__
+    return await event.answer(PERMISSION_DENIED_MESSAGE)
+                 ^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/pydantic/main.py", line 704, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}') from exc
+AttributeError: 'Message' object has no attribute 'message'
+2023-07-26 22:02:59,594 - aiogram.event - INFO - Update id=498668300 is not handled. Duration 0 ms by bot id=6600760153
+2023-07-26 22:02:59,594 - aiogram.event - ERROR - Cause exception while process update id=498668300 by bot id=6600760153
+AttributeError: 'Message' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/pydantic/main.py", line 702, in __getattr__
+    return pydantic_extra[item]
+           ~~~~~~~~~~~~~~^^^^^^
+KeyError: 'message'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 307, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 157, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 39, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 274, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 124, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/bot/middleware/permission_check.py", line 21, in __call__
+    return await event.answer(PERMISSION_DENIED_MESSAGE)
+                 ^^^^^^^^^^^^^
+  File "/home/master/Documents/github/ozon_parser_bot/venv/lib/python3.11/site-packages/pydantic/main.py", line 704, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}') from exc
+AttributeError: 'Message' object has no attribute 'message'
+2023-07-26 22:03:00,556 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2023-07-26 22:03:00,557 - aiogram.dispatcher - INFO - Polling stopped for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:03:00,558 - aiogram.dispatcher - INFO - Polling stopped
+2023-07-26 22:03:03,113 - asyncio - DEBUG - Using selector: EpollSelector
+2023-07-26 22:03:03,842 - aiogram.dispatcher - INFO - Start polling
+2023-07-26 22:03:04,054 - aiogram.dispatcher - INFO - Run polling for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:03:06,016 - aiogram.event - INFO - Update id=498668301 is handled. Duration 547 ms by bot id=6600760153
+2023-07-26 22:03:09,629 - aiogram.event - INFO - Update id=498668302 is handled. Duration 188 ms by bot id=6600760153
+2023-07-26 22:06:08,038 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2023-07-26 22:06:08,039 - aiogram.dispatcher - INFO - Polling stopped for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:06:08,039 - aiogram.dispatcher - INFO - Polling stopped
+2023-07-26 22:06:24,501 - asyncio - DEBUG - Using selector: EpollSelector
+2023-07-26 22:06:24,799 - aiogram.dispatcher - INFO - Start polling
+2023-07-26 22:06:24,882 - aiogram.dispatcher - INFO - Run polling for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:06:33,768 - aiogram.event - INFO - Update id=498668303 is handled. Duration 777 ms by bot id=6600760153
+2023-07-26 22:06:58,077 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2023-07-26 22:06:58,078 - aiogram.dispatcher - INFO - Polling stopped for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:06:58,078 - aiogram.dispatcher - INFO - Polling stopped
+2023-07-26 22:06:59,976 - asyncio - DEBUG - Using selector: EpollSelector
+2023-07-26 22:07:00,839 - aiogram.dispatcher - INFO - Start polling
+2023-07-26 22:07:01,116 - aiogram.dispatcher - INFO - Run polling for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:07:07,701 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2023-07-26 22:07:07,702 - aiogram.dispatcher - INFO - Polling stopped for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:07:07,702 - aiogram.dispatcher - INFO - Polling stopped
+2023-07-26 22:07:27,603 - asyncio - DEBUG - Using selector: EpollSelector
+2023-07-26 22:07:30,149 - aiogram.dispatcher - INFO - Start polling
+2023-07-26 22:07:30,418 - aiogram.dispatcher - INFO - Run polling for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:07:31,902 - aiogram.event - INFO - Update id=498668304 is handled. Duration 1118 ms by bot id=6600760153
+2023-07-26 22:07:38,885 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2023-07-26 22:07:38,886 - aiogram.dispatcher - INFO - Polling stopped for bot @OzonParser_Bot id=6600760153 - 'Ozon parser'
+2023-07-26 22:07:38,886 - aiogram.dispatcher - INFO - Polling stopped
